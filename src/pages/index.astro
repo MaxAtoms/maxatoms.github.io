@@ -1,10 +1,14 @@
-<!doctype html>
+---
+import "../styles/global.css";
+import "/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+import { Image } from 'astro:assets';
+import avatar from '../assets/avatar.png';
+---
+
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <link href="/css/tailwind.css" rel="stylesheet">
-    <link href="/node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Thomas M. Schöller, Software Developer">
@@ -27,7 +31,7 @@
 <main class="sm:bg-gray-200 dark:bg-gray-900 sm:dark:bg-gray-800 min-h-screen flex flex-col justify-center">
     <div class="bg-white dark:bg-gray-900 max-w-2xl mx-auto sm:rounded-md sm:shadow-md p-8 flex flex-col md:flex-row gap-x-6 gap-y-6 sm:gap-y-0 items-center">
         <div class="md:w-2/5 text-center md:-mt-8 flex sm:flex-col items-center">
-            <img class="h-32 rounded-full filter drop-shadow-md mx-auto" alt="Picture of Thomas" src="img/avatar.png">
+            <Image class="h-32 rounded-full filter drop-shadow-md mx-auto" alt="Picture of Thomas" width={128} height={128} src={avatar}/>
             <div>
                 <h1 class="text-gray-900 dark:text-gray-100 md:mt-6 md:ml-0 ml-6 text-xl font-bold">
                     Thomas
