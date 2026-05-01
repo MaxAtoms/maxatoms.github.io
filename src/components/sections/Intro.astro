@@ -1,7 +1,8 @@
 ---
 import { Image } from 'astro:assets';
-import avatar from '../assets/avatar.png';
-import {FULL_NAME} from "../constants"
+import avatar from '../../assets/avatar.png';
+import {FULL_NAME} from "../../constants"
+import IconLink from "../IconLink.astro"
 ---
 <div class="bg-white dark:bg-gray-900 max-w-2xl mx-auto sm:rounded-md sm:shadow-md p-8 flex flex-col md:flex-row gap-x-6 gap-y-6 sm:gap-y-0 items-center">
     <div class="md:w-2/5 text-center md:-mt-8 flex sm:flex-col items-center">
@@ -24,24 +25,29 @@ import {FULL_NAME} from "../constants"
             </p>
             <p>
                 You can find some of my projects on
-                <a href="https://github.com/MaxAtoms"
-                    class="text-blue-800 dark:text-green-400 whitespace-nowrap font-semibold group">
-                    <i class="text-2xl align-[-.125em] bi-github" alt="Go to my GitHub profile"></i> <span
-                        class="group-hover:underline">GitHub</span></a>.
+                <IconLink 
+                    link="https://github.com/MaxAtoms" 
+                    title="Go to my GitHub profile" 
+                    text="GitHub" 
+                    icon="bi-github"
+                    />.
 
                 If you want to learn more about me or get in touch, check out my
-                <a href="https://www.linkedin.com/in/thomasschoeller/"
-                    class="text-blue-800 dark:text-green-400 whitespace-nowrap font-semibold group">
-                    <i class="text-2xl align-[-.125em] bi-linkedin" alt="Go to my LinkedIn profile"></i> <span
-                        class="group-hover:underline">LinkedIn</span></a> profile.
+                <IconLink 
+                    link="https://linkedin.com/in/thomasschoeller" 
+                    title="Go to my LinkedIn profile" 
+                    text="LinkedIn" 
+                    icon="bi-linkedin"
+                    /> profile.
             </p>
             <p>
                 Oh, and by the way, here is my 
-                <a href="resume.pdf"
-                    class="text-blue-800 dark:text-green-400 whitespace-nowrap font-semibold group">
-                    <i class="text-2xl align-[-.125em] bi-file-earmark-person-fill" alt="Open my resume"></i> <span
-                        class="group-hover:underline">resume</span></a>.
-                
+                <IconLink 
+                    link="resume.pdf" 
+                    title="Open my resume" 
+                    text="resume" 
+                    icon="bi-file-earmark-person-fill"
+                    />.
             </p>
         </div>
     </div>

@@ -1,0 +1,8 @@
+---
+import "/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+const {link,title,text,icon} = Astro.props
+---
+<a href={link}
+    class="text-blue-800 dark:text-green-400 whitespace-nowrap font-semibold group">
+    <i class=`text-2xl align-[-.125em] ${icon}` title={title}/> 
+    <span class="group-hover:underline">{text}</span></a>
