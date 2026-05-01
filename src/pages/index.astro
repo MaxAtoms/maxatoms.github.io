@@ -1,7 +1,7 @@
 ---
 import Intro from "../components/sections/Intro.astro"
 import "../styles/global.css";
-import {FULL_NAME} from "../constants"
+import {FULL_NAME, PROFESSION} from "../constants"
 const pageTitle = FULL_NAME;
 ---
 
@@ -11,10 +11,10 @@ const pageTitle = FULL_NAME;
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Thomas M. Schöller, Software Developer">
+    <meta name="description" content=`${pageTitle}, ${PROFESSION}`>
 
-    <meta property="og:title" content="Thomas M. Schöller"/>
-    <meta property="og:site_name" content="Thomas M. Schöller">
+    <meta property="og:title" content={pageTitle}/>
+    <meta property="og:site_name" content={pageTitle}>
     <meta property="og:type" content="website"/>
     <meta property="og:locale" content="en"/>
 
