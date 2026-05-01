@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+import avatar from '../assets/avatar.png';
+import {FULL_NAME} from "../constants"
+---
+<div class="bg-white dark:bg-gray-900 max-w-2xl mx-auto sm:rounded-md sm:shadow-md p-8 flex flex-col md:flex-row gap-x-6 gap-y-6 sm:gap-y-0 items-center">
+    <div class="md:w-2/5 text-center md:-mt-8 flex sm:flex-col items-center">
+        <Image class="h-32 rounded-full filter drop-shadow-md mx-auto" alt="Picture of Thomas" width={128} height={128} src={avatar}/>
+        <div>
+            <h1 class="text-gray-900 dark:text-gray-100 md:mt-6 md:ml-0 ml-6 text-xl font-bold">
+                {FULL_NAME}
+            </h1>
+        </div>
+    </div>
+    <div class="md:w-4/5 text-gray-900 dark:text-gray-100 text-justify">
+        <div class="space-y-4">
+            <p>
+                Hi, I'm Thomas!
+            </p>
+            <p>
+                I am a master's student in Software Engineering at Ulm University.
+                Previously, I worked at SEITENBAU, where I developed .NET backend services for one of Germany's leading streaming and TV platforms.
+                My current interests are in developer tools, static analysis, and platform engineering.
+            </p>
+            <p>
+                You can find some of my projects on
+                <a href="https://github.com/MaxAtoms"
+                    class="text-blue-800 dark:text-green-400 whitespace-nowrap font-semibold group">
+                    <i class="text-2xl align-[-.125em] bi-github" alt="Go to my GitHub profile"></i> <span
+                        class="group-hover:underline">GitHub</span></a>.
+
+                If you want to learn more about me or get in touch, check out my
+                <a href="https://www.linkedin.com/in/thomasschoeller/"
+                    class="text-blue-800 dark:text-green-400 whitespace-nowrap font-semibold group">
+                    <i class="text-2xl align-[-.125em] bi-linkedin" alt="Go to my LinkedIn profile"></i> <span
+                        class="group-hover:underline">LinkedIn</span></a> profile.
+            </p>
+            <p>
+                Oh, and by the way, here is my 
+                <a href="resume.pdf"
+                    class="text-blue-800 dark:text-green-400 whitespace-nowrap font-semibold group">
+                    <i class="text-2xl align-[-.125em] bi-file-earmark-person-fill" alt="Open my resume"></i> <span
+                        class="group-hover:underline">resume</span></a>.
+                
+            </p>
+        </div>
+    </div>
+</div>
